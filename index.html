@@ -1,210 +1,662 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Shower Presentation Engine</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
-    <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-        }
-    </style>
-</head>
-<body class="shower list">
-
-    <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
-    </header>
-
-    <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="https://pepelsbey.net">Vadim Makeev</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
+<html lang="ru">
+    <head>
+        <title>"Свежий" css</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+        <link
+            rel="stylesheet"
+            href="node_modules/@shower/ribbon/styles/styles.css"
+        />
         <style>
-            #cover h2 {
-                margin: 30px 0 0;
-                color: white;
-                text-align: center;
-                font-size: 70px;
-            }
-
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
-                font-size: 20px;
-            }
-
-            #cover p a {
-                color: white;
+            .shower {
+                --slide-ratio: calc(16 / 9);
             }
         </style>
-    </section>
+    </head>
+    <body class="shower list">
+        <header class="caption">
+            <h1>"Свежий" css</h1>
+        </header>
 
-    <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-    </section>
+        <section class="slide" id="cover">
+            <h2>"Свежий" css</h2>
+            <figure>
+                <img
+                    class="cover"
+                    src="pictures/cover.jpeg"
+                    alt="Hands on the orange typewriter in a park"
+                />
+                <figcaption class="copyright right white">
+                    <span>@Daria Zelenkevich </span>
+                </figcaption>
+            </figure>
+            <style>
+                #cover h2 {
+                    margin: auto;
+                    color: white;
+                    text-align: center;
+                    font-size: 70px;
+                }
 
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
+                #cover p {
+                    margin: 10px 0 0;
+                    text-align: center;
+                    color: white;
+                    font-style: italic;
+                    font-size: 20px;
+                }
 
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-        </div>
-    </section>
+                #cover p a {
+                    color: white;
+                }
 
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
+                #cover img {
+                    width: 100%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section class="slide">
+            <h2>Фичи css</h2>
+            <div class="columns two">
                 <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
+                    <li>Scrollbar-gutter</li>
+                    <li>Inset</li>
+                    <li>Text-overflow и line-clamp</li>
+                    <li>Content-visibility</li>
                 </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
-    </section>
+                <ul>
+                    <li>Самостоятельные значения transform</li>
+                    <li>:has()</li>
+                    <li>@layer</li>
+                </ul>
+            </div>
 
-    <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
-    </section>
+            <p class="note">Возможно, не самые свежие, но интересные, фичи</p>
+        </section>
 
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
-    </section>
+        <section class="slide">
+            <h2>Scrollbar-gutter</h2>
+            <p>
+                Позволяет резервировать место для полосы прокрутки, предотвращая
+                нежелательные изменения макета по мере роста контента, а также
+                избегая ненужных визуальных эффектов, когда прокрутка не нужна.
+            </p>
+            <p>
+                Применяется только в том случае, если к элементу так же
+                применяется свойство <b>overflow</b> в значениях <i>hidden</i>,
+                <i>scroll</i>, <i>auto</i>.
+            </p>
+            <p>Поддержка браузерами: 73.66%</p>
+        </section>
 
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
+        <section class="slide">
+            <p>Значения свойства:</p>
+            <ul>
+                <li>
+                    <i><b>auto</b></i
+                    >: никаких изменений по сравнению с текущим поведением.
+                    Значение по умолчанию.
+                </li>
+                <li>
+                    <i><b>stable</b></i
+                    >: добавляет отступ под стандартную полосу прокрутки
+                </li>
+                <li>
+                    <i><b>stable both-edges</b></i
+                    >: добавляет отступ под стандартную полосу прокрутки с
+                    симметричным отступом с другой стороны
+                </li>
+            </ul>
+        </section>
 
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
-    </section>
+        <section id="scrollbar" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img src="pictures/scrollbar.png" alt="Scrollbar img" />
+                </h2>
+                <style>
+                    #scrollbar img {
+                        width: 58%;
+                        height: 100%;
+                    }
+                </style>
+                <figcaption class="copyright right black">
+                    <a
+                        href="https://github.com/felipeerias/scrollbar-gutter-explainer"
+                        >@felipeerias / scrollbar-gutter-explainer
+                    </a>
+                </figcaption>
+            </figure>
+        </section>
 
-    <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
-    </section>
+        <section class="slide">
+            <h2>Inset</h2>
+            <p>
+                Свойство inset заменяет четыре других свойства: top, right,
+                bottom и left , позволяя указать вставку позиционируемого
+                элемента сразу со всех четырех сторон.
+            </p>
+            <p>Поддержка браузерами: 92.29%</p>
+        </section>
 
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
-    </section>
+        <section id="inset" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img src="pictures/inset.png" alt="Inset img" />
+                </h2>
+                <figcaption class="copyright right black">
+                    <a
+                        href="https://developer.mozilla.org/ru/docs/Web/CSS/inset"
+                    >
+                        MDN / inset
+                    </a>
+                </figcaption>
+            </figure>
+            <style>
+                #inset img {
+                    width: 78%;
+                    height: 100%;
+                }
+            </style>
+        </section>
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
+        <section class="slide">
+            <h2>Text-overflow и line-clamp</h2>
+            <p>
+                Свойства text-overflow и line-clamp используются для обрезания
+                текста, если он переполняет элемент. Свойство text-overflow
+                используется для однострочного текста, а свойство line-clamp
+                полезно для обрезания многострочного текста.
+            </p>
+        </section>
 
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
-    </section>
+        <section class="slide">
+            <p>
+                Свойства работают в том случае, если к элементу применяется
+                свойство <b>overflow</b> в значениях <i>hidden</i>,
+                <i>scroll</i> или <i>auto</i>.
+            </p>
+            <p>Поддержка браузерами text-overflow: 92.29%</p>
+            <p>
+                Поддержка браузерами line-clamp в комбинации со свойством
+                <code>display: -webkit-box</code>: 97.11%
+            </p>
+        </section>
 
-    <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
+        <section class="slide">
+            <p>Значения свойства <b>text-overflow</b>:</p>
+            <ul>
+                <li>
+                    <i><b>clip</b></i
+                    >: текст обрезается по размеру области.
+                </li>
+                <li>
+                    <i><b>ellipsis </b></i>: текст обрезается и к концу строки
+                    добавляется многоточие.
+                </li>
+            </ul>
+            <p>
+                Для работы свойства так же необходим запрет на перенос строки
+                свойством <code>white-space: nowrap</code>
+            </p>
+        </section>
 
-    <div class="progress"></div>
+        <section id="textOverflow" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img
+                        src="pictures/textOverflow.png"
+                        alt="textOverflow img"
+                    />
+                </h2>
+                <figcaption class="copyright right black">
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow"
+                    >
+                        MDN / text-overflow
+                    </a>
+                </figcaption>
+            </figure>
+            <style>
+                #textOverflow img {
+                    width: 78%;
+                    height: 100%;
+                }
+            </style>
+        </section>
 
-    <script src="shower/shower.js"></script>
-    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+        <section class="slide">
+            Свойство line-clamp работает только для блочного контейнера в
+            сочетании со свойством <i>display</i> и <i>-webkit-box-orient</i>.
+            Line-clamp используется с префиксом -webkit, а в качестве значения
+            принимает число строк, на которое будет действовать перенос.
+            <pre>
+                <code>&nbsp;&nbsp;display: -webkit-box;</code>
+                <code>&nbsp;&nbsp;-webkit-line-clamp: 2;</code>
+                <code>&nbsp;&nbsp;-webkit-box-orient: vertical;</code>
+                <code>&nbsp;&nbsp;overflow: hidden;</code>
+            </pre>
+        </section>
 
-</body>
+        <section id="lineClamp" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img src="pictures/lineClamp.png" alt="lineClamp img" />
+                </h2>
+                <figcaption class="copyright right black">
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp"
+                    >
+                        MDN / -webkit-line-clamp
+                    </a>
+                </figcaption>
+            </figure>
+            <style>
+                #lineClamp img {
+                    width: 50%;
+                    height: 50%;
+                }
+            </style>
+        </section>
+
+        <section class="slide">
+            <h2>Content-visibility</h2>
+            <p>
+                Свойство content-visibility предназначено для ускорения первого
+                рендеринга веб-страницы, чтобы ускорить доступность контента
+                пользователю. Оно сообщает браузеру, какие части страницы
+                содержат изолированный контент, что, в свою очередь, позволяет
+                браузеру оптимизировать отрисовку страницы за счет отложенных
+                вычислений.
+            </p>
+            <p>Поддержка браузерами: 71.89%</p>
+        </section>
+
+        <section class="slide">
+            <p>У свойства <b>content-visibility</b> 3 значения:</p>
+            <ul>
+                <li>
+                    <i><b>visible</b></i
+                    >: значение по умолчанию. Никак не влияет на отображение
+                    контента.
+                </li>
+                <li>
+                    <i><b>hidden</b></i
+                    >: скрывает элемент, но сохраняет его состояние рендеринга,
+                    т.е. поведение схоже со свойством
+                    <code>display: none</code>, но затраты на повторную
+                    отрисовку этого элемента намного меньше.
+                </li>
+                <li>
+                    <i><b>auto</b></i
+                    >: ограничивает вычисление размеров, расположения, стилей и
+                    отрисовки потомков элемента с этим значением при первой
+                    отрисовке.
+                </li>
+            </ul>
+        </section>
+
+        <section class="slide">
+            <p>
+                С помощью свойства content-visibility браузер загружает и
+                стилизует контент, который пользователь в данный момент видит на
+                экране. Для остального контента достаточно указать его высоту. В
+                этом случае в качестве плейсхолдера выступает свойство
+                <b>contains-intrinsic-size</b>.
+            </p>
+        </section>
+
+        <section id="contentVisibility" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img
+                        src="pictures/contentVisibility.png"
+                        alt="contentVisibility img"
+                    />
+                </h2>
+                <figcaption class="copyright right black">
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp"
+                    >
+                        Ozan Tunca / Using CSS content-visibility to boost your
+                        rendering performance
+                    </a>
+                </figcaption>
+            </figure>
+            <style>
+                #contentVisibility img {
+                    width: 50%;
+                    height: 50%;
+                }
+            </style>
+        </section>
+
+        <section class="slide">
+            <h2>Самостоятельные значения transform</h2>
+            <p>
+                Свойства <i>scale()</i>, <i>translate()</i>, и <i>rotate()</i>,
+                которые раньше объявлялись как часть значения transform, теперь
+                стали самостоятельными и их можно указывать в правилах отдельно.
+            </p>
+            <p>Поддержка браузерами: >90%</p>
+        </section>
+
+        <section id="transform" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img src="pictures/transform.png" alt="transform img" />
+                </h2>
+                <figcaption class="copyright right black">
+                    <a
+                        href="https://web.dev/css-individual-transform-properties/"
+                    >
+                        Bramus & L. David Baron / Finer grained control over CSS
+                        transforms with individual transform properties
+                    </a>
+                </figcaption>
+            </figure>
+            <style>
+                #transform img {
+                    width: 60%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section class="slide">
+            <h2>:has()</h2>
+            <p>
+                Псевдокласс :has() позволяет выбрать элемент, уточнив основной
+                селектор дополнительным. В отличие от привычных селекторов,
+                правило применится только к тому селектору, который был описан
+                до :has(). Использование :has() не влияет на специфичность, т.
+                е. при расчёте веса селектора учитывается только целевой
+                селектор, к которому применяется этот псевдокласс.
+            </p>
+            <p>Поддержка браузерами: 86.19%</p>
+        </section>
+
+        <section class="slide">
+            <p>
+                Использование :has() позволяет добавить условия для применения
+                стилей. Его так же можно комбинировать с другими псевдоклассами
+                и селекторами, что, по сути, даёт возможность прибегать к
+                условным операторам И и ИЛИ в правилах стилей
+            </p>
+        </section>
+
+        <section id="has1" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img src="pictures/has1.png" alt="has() img" />
+                </h2>
+                <figcaption class="copyright right black">
+                    <a href="https://12daysofweb.dev/2022/css-has-selector/">
+                        Estelle Weyl / CSS :has()
+                    </a>
+                </figcaption>
+            </figure>
+            <style>
+                #has1 img {
+                    width: 60%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section id="has2" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img src="pictures/has2.png" alt="has() img" />
+                </h2>
+            </figure>
+            <style>
+                #has2 img {
+                    width: 60%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section class="slide">
+            <h2>@layer</h2>
+            <p>
+                Порядок загружаемых стилей очень важен, так как стили,
+                загруженные последними, могут перезаписывать ранее загруженные
+                стили.
+            </p>
+            <p>
+                С появлением @layer можно предварительно определить слои и их
+                порядок, а затем поместить в них загружаемые стили. Это позволит
+                сохранить переопределение стилей, но без контроля за порядком их
+                загрузки.
+            </p>
+            <p>Поддержка браузерами: 89.9%</p>
+        </section>
+
+        <section id="layerVideo" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <video autoplay="" loop="" muted="">
+                        <source
+                            src="https://storage.googleapis.com/web-dev-uploads/video/vS06HQ1YTsbMKSFTIPl2iogUQP73/MQJ5WhdqY78qTwIU2Bt6.mp4"
+                            type="video/mp4"
+                        />
+                    </video>
+                </h2>
+                <figcaption class="copyright right black">
+                    <a href="https://web.dev/state-of-css-2022/#cascade-layers">
+                        web.dev / Fresh for 2022: Cascade layers
+                    </a>
+                </figcaption>
+            </figure>
+            <style>
+                #layerVideo video {
+                    width: 60%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section id="layerDevtools" class="slide">
+            <p>
+                Для удобства разработки в Chrome DevTools поддерживается
+                отображение названий и группировка стилей по слоям.
+            </p>
+        </section>
+
+        <section id="layerDevtools" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img
+                        src="pictures/layerDevtools.png"
+                        alt="layer Devtools img"
+                    />
+                </h2>
+            </figure>
+            <style>
+                #layerDevtools img {
+                    width: 50%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section class="slide">
+            <p>Синтаксис <b>@layer</b>:</p>
+            <ul>
+                <li>@layer layer-name {rules}</li>
+                <li>@layer layer-name;</li>
+                <li>@layer layer-name, layer-name, layer-name;</li>
+                <li>@layer {rules}</li>
+            </ul>
+            <p>
+                Где <i><b>layer-name</b></i> - название каскадного слоя, а
+                <i><b>rules</b></i> - набор правил CSS в каскадном слое.
+            </p>
+        </section>
+
+        <section id="layerExample" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img
+                        src="pictures/layerExample.png"
+                        alt="layer example img"
+                    />
+                </h2>
+                <figcaption class="copyright right black">
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/@layer"
+                    >
+                        MDN/ @layer
+                    </a>
+                </figcaption>
+            </figure>
+            <style>
+                #layerExample img {
+                    width: 60%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section id="layerHW" class="slide">
+            <figure>
+                <h2 class="shout">
+                    <img
+                        src="pictures/layerHW.png"
+                        alt="layer hello world img"
+                    />
+                </h2>
+            </figure>
+            <style>
+                #layerHW img {
+                    width: 60%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section id="layerDevtools" class="slide">
+            <p>
+                Любые стили, не описанные в именованных слоях, собираются вместе
+                и помещаются в один анонимный слой. Такие стили, объявленные вне
+                слоя, переопределяют стили, объявленные в слоях, независимо от
+                их специфичности.
+            </p>
+        </section>
+
+        <section id="layerCreation" class="slide">
+            <p>Есть 3 способа объявить слой:</p>
+            <figure>
+                <h2 class="shout">
+                    <img
+                        src="pictures/layerCreation.png"
+                        alt="layer creation img"
+                    />
+                </h2>
+            </figure>
+            <style>
+                #layerCreation img {
+                    width: 50%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section class="slide">
+            <p>
+                В последнем случае, слой не именованный, но объявленный. В
+                дальнейшем ему уже нельзя будет переопределить стили. Приоритет
+                по специфичности у такого слоя, такой же как и у именованных
+                слоёв
+            </p>
+
+            <p>
+                Так же уже имеющиеся стили можно определить как слой через
+                @import:
+            </p>
+
+            <pre><code>@import "theme.css" layer(utilities);</code></pre>
+        </section>
+
+        <section id="layerExample2" class="slide">
+            <p>
+                Именованным слоям могут быть определены или переопределены
+                стили:
+            </p>
+            <figure>
+                <h2 class="shout">
+                    <img
+                        src="pictures/layerExample2.png"
+                        alt="layer example 2 img"
+                    />
+                </h2>
+            </figure>
+            <style>
+                #layerExample2 img {
+                    width: 30%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section class="slide">
+            <pre><code>@layer base, special;</code></pre>
+            <p>
+                У слоёв объявленных таким образом специфичность устанавливается
+                в обратном порядке - слой, указанный последним, имеет набольший
+                приоритет и переопределяет CSS правила предыдущих слоёв.
+            </p>
+        </section>
+
+        <section class="slide">
+            <p>Так же слой, может быть вложен в слой:</p>
+            <pre><code>@layer framework {</code>
+                <code>&nbsp;&nbsp;@layer layout {</code>
+                    <code>&nbsp;&nbsp;}</code>
+                        <code>}</code>
+            </pre>
+        </section>
+
+        <section class="slide">
+            <p>
+                Чтобы добавить правила к слою внутри framework, его название
+                указывается через <b>.</b>:
+            </p>
+            <pre><code>@layer framework.layout {</code>
+                <code>&nbsp;&nbsp;p {</code>
+                    <code>&nbsp;&nbsp;&nbsp;&nbsp;margin-block: 1rem;</code>
+                        <code>&nbsp;&nbsp;}</code>
+                            <code>}</code>
+            </pre>
+        </section>
+
+        <section class="slide" id="endImg">
+            <figure>
+                <img class="cover" src="pictures/endImg.png" alt="end img" />
+            </figure>
+            <style>
+                #endImg img {
+                    width: 100%;
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <footer class="badge">
+            <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+        </footer>
+
+        <div class="progress"></div>
+
+        <script src="shower/shower.js"></script>
+        <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+    </body>
 </html>
